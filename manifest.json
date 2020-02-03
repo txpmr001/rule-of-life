@@ -1,0 +1,16 @@
+{
+  "name": "Rule of Life",
+  "short_name": "Rule of Life",
+  "theme_color": "maroon",
+  "background_color": "cornsilk",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "images/icons/splash-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

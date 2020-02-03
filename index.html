@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://validator.w3.org -->
+<!-- TODO: Rewrite/simplify search function. -->
+<!-- TODO: Experiment with screen breakpoints & panel percents. -->
+<!-- TODO: Limit initial html size & use fetch to add additional content. -->
+<!-- TODO: Test notifications to devices with pwa installed. -->
+<!-- TODO: Delete anchor click history ??? -->
+<head>
+  <title>Rule of Life</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rule of Life for Associates lays a foundation
+    of Eucharistic life for lay people associated with the religious Institutes
+    founded by Saint Peter Julian Eymard:
+    the Congregation of the Blessed Sacrament
+    and the Servants of the Blessed Sacrament.">
+  <meta name="keywords" content="rule of life, blessed sacrament, eucharist, peter julian eymard">
+  <meta name="author" content="Peter M Reynolds">
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="maroon">
+</head>
+
+<body>
+
+<header class="navbar">
+  <img id="logo" src="images/chalice-host-35.png" alt="Chalice-Host" />
+
+  <input id="search-text" type="text" aria-label="Search Text" placeholder="Search..." />
+  <img id="search-button" src="images/magnifier-200.png" aria-label="Search" alt="Search" onclick="handleButton('search')" />
+
+  <ul class="navlist">
+    <li class="dropdown-button">
+      <img id="menu-button" class="dropdown-button" src="images/hamburger-white.png" aria-label="Menu" alt="Menu" onclick="handleMenu('toggle-menu')" />
+      <ul id="menu-dropdown" class="nav-dropdown">
+        <li><a href="#page-top">Top</a></li>
+        <li><a href="#" onclick="handleMenu('toc')">Table of Contents</a></li>
+        <li><a href="#" onclick="handleMenu('goto')">Goto Page</a></li>
+        <li><a href="#page-bottom">Bottom</a></li>
+        <li><a href="#" onclick="handleMenu('fontsize')">Change Font Size</a></li>
+        <li id="install-menu-item"><a href="#" class="installButton">Install the Rule of Life App</a></li>
+        <li id="version">v1.030</li>
+      </ul>
+    </li>
+  </ul>
+</header>
+
+<main>
+<!-- MAIN CONTENT ------------------------------ MAIN CONTENT START -->
+
+<!-- <div id="message-area">message area</div> -->
+
+<div id="hilitor-group">
+<div id="filter-group-1" class="filter-group">
+<div id="page-top" class="anchor"></div>
+<div id="page-0" class="anchor"></div>
+<h3 id="document-heading" class="center">Rule of Life for Associates</h3>
+<h4 class="center">of</h4>
+<h4 class="two-line-heading center">The Congregation</h4>
+<h4 class="two-line-heading center">of the Blessed Sacrament</h4>
+<img class="responsive-img" src="images/rule-of-life-1.png" alt="Chalice" />
+<hr class="basic heavy" />
+<h4 class="two-line-heading right">Aggregation of the</h4>
+<h4 class="two-line-heading right">Blessed Sacrament</h4>
+<hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-2" class="filter-group">
+<img class="responsive-img" src="images/julian-eymard-1.jpg" alt="Julian Eymard" />
+<h4 class="center">SAINT PETER JULIAN EYMARD</h4>
+<div class="italic center">Founder of the</div>
+<div class="italic center">Aggregation of the Blessed Sacrament</div>
+<div id="page-1" class="anchor"></div>
+<div class="page-number">Page 1</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-3" class="filter-group">
+<h4 class="center">FOREWARD</h4>
+<p>
+This <span class="italic">Rule of Life for Associates</span> lays a foundation of Eucharistic
+life for lay people associated with the religious Institutes
+founded by Saint Peter Julian Eymard: the Congregation
+of the Blessed Sacrament and the Servants of the Blessed
+Sacrament.
+</p><p>
+It stems from the long tradition of our religious families,
+which, starting from Saint Peter Julian Eymard, gave life
+to a public association of lay faithful called the <span class="italic">Aggregation
+of the Blessed Sacrament</span> in order to share the Eucharistic
+mission with the laity.
+</p><p>
+The present text expresses a renewed vision of associated
+life of lay faithful with our Congregation taking into account
+the experiences made over the last years, especially since the
+approval of the respective two Eymardian Institutes' <span class="italic">Rule
+of Life</span>.
+</p><p>
+It is offered to all those who feel moved by the Holy Spirit
+and understand themselves as belonging to the one spiritual
+family which draws inspiration from Saint Peter Julian
+Eymard.
+</p>
+<hr class="space-10" />
+<div class="right">
+  <div>25 March 2010</div>
+  <div class="italic">Annunciation of the Lord</div>
+</div>
+<div>
+  <div>
+    <hr class="space-10" />
+    <div>Fr Fiorenzo Salvi, SSS</div>
+    <div class="italic">Superior General</div>
+  </div>
+  <div>
+    <hr class="space-10" />
+    <div>Sr Catherine Marie Caron, SSS</div>
+    <div class="italic">Superior General</div>
+  </div>
+</div>
+<div id="page-2" class="anchor"></div>
+<div class="page-number">Page 2</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<!-- installation dialog -->
+<div id="filter-group-4" class="filter-group">
+<a id="install-dialog-anchor">hidden</a>
+<div id="install-dialog" class="install-dialog">
+  <h5 class="center">Upgrade to the Rule of Life App</h5>
+  <div class="notification">
+    <div class="notification-a">
+    <ul>
+      <li><span>Faster Response Times</span></li>
+      <li><span>Offline Access</span></li>
+      <li><span>Look 10 Years Younger</span></li>
+    </ul>
+  </div>
+  <div class="notification-b">
+    <!-- <button class="installButton" type="button" aria-label="Install"><h4>Install</h4></button> -->
+    <button class="button button4 installButton" aria-label="Install">Install</button>
+  </div>
+  </div>
+</div>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-5" class="filter-group">
+<div id="section-I" class="anchor"></div>
+<h4 class="section">I - Identity and Scope</h4>
+<div id="chapter-1" class="anchor"></div>
+<h4 class="chapter">1 Name</h4>
+<p>
+Inspired by the spirit
+of Saint Peter Julian Eymard,
+we form a lay Association, approved by the Church,
+called the <span class="italic">Aggregation of the Blessed Sacrament</span>
+in partnership with
+the Congregation of the Blessed Sacrament
+and the Servants of the Blessed Sacrament.
+</p>
+<p>
+We thus seek to pursue
+our Christian vocation
+and our call to holiness
+by following the evangelical way
+taught by Saint Peter Julian Eymard.
+</p>
+<div id="page-3" class="anchor"></div>
+<div class="page-number">Page 3</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-6" class="filter-group">
+<div id="chapter-2" class="anchor"></div>
+<h4 class="chapter">2 Our Ideal</h4>
+<p>
+Our Ideal
+is to live the mystery of the Eucharist fully
+and to make known its meaning,
+so that Christ's reign may come
+and the glory of God
+may be revealed to the world.
+</p>
+<p>
+In response to our baptismal vocation
+we seek to witness to Christ's presence
+at the crossroads of society and,
+starting from the Eucharist,
+we strive to influence our world
+in the light of this Mystery,
+Source and Summit of all Evangelizing.
+</p>
+<div id="page-4" class="anchor"></div>
+<div class="page-number">Page 4</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-7" class="filter-group">
+<div id="chapter-3" class="anchor"></div>
+<h4 class="chapter">3 The Founder</h4>
+<p>
+We are inspired by the teachings
+and example of Saint Peter Julian Eymard,
+"Outstanding Apostle of the Eucharist."
+He responded to the needs
+of the people of his time
+by proclaiming God's love
+manifested in a special way
+in Christ's gift in the Eucharist;
+he encouraged the faithful to share,
+as associated members,
+in the charism and the mission
+of the religious Congregations he founded.
+</p>
+<p>
+Convinced that a life
+cannot be fully Eucharistic
+if it is not consecrated to God and to people,
+he left us an example
+of contemplation and apostolic action.
+</p>
+<div id="page-5" class="anchor"></div>
+<div class="page-number">Page 5</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-8" class="filter-group">
+<div id="chapter-4" class="anchor"></div>
+<h4 class="chapter">4 Spirit</h4>
+<p>
+We are called to live
+an authentically Eucharistic
+Christian spirituality,
+and we are moved by the spirit of love
+that led Christ
+to give his life for the world
+and to perpetuate this gift in the Eucharist.
+</p>
+<p>
+We associate ourselves to this gift
+that he makes of himself,
+and we put ourselves at the service of the
+Kingdom,
+making our own the Apostle's words:
+<span class="italic">"It is no longer I who live,
+but Christ who lives in me."</span>
+</p>
+<div id="page-6" class="anchor"></div>
+<div class="page-number">Page 6</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-9" class="filter-group">
+<div id="chapter-5" class="anchor"></div>
+<h4 class="chapter">5 The Life of the Associates</h4>
+<p>
+The Eucharistic lifestyle of Christians
+is ecclesial and communal.
+</p>
+<p>
+Following the example of the first
+Christian community,
+our experience of communion
+is nourished by the Word,
+by the "breaking of Bread,"
+by prayer,
+and by listening to the teaching
+of the Apostles.
+By living with
+"one heart and one soul"
+we witness to the presence of the Risen Lord.
+</p>
+<p>
+We commit ourselves to being Associates
+by sharing in gatherings of prayer and
+formation.
+</p>
+<div id="page-7" class="anchor"></div>
+<div class="page-number">Page 7</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-10" class="filter-group">
+<div id="section-II" class="anchor"></div>
+<h4 class="section">II - A Life Shaped by the Eucharist</h4>
+<div id="chapter-6" class="anchor"></div>
+<h4 class="chapter">6 The Eucharist at the Center of Our Life</h4>
+<p>
+The Eucharist
+shapes our lifestyle as individuals,
+as family members
+and as members of society.
+We Endeavor to understand every reality
+in the light of this sacrament
+and we contribute
+to a Christian vision of our global reality.
+</p>
+<p>
+By means of a formation program
+we strive to acquire
+an ever more profound appreciation
+of the qualities of a Eucharistic life,
+in order to foster a mature faith
+and to extend our presence
+in society and in the Church.
+</p>
+<div id="page-8" class="anchor"></div>
+<div class="page-number">Page 8</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-11" class="filter-group">
+<div id="chapter-7" class="anchor"></div>
+<h4 class="chapter">7 The Eucharistic Celebration</h4>
+<p>
+The celebration of the Memorial of the Lord
+is at the center of our life
+as individual persons
+and as family members.
+It is the starting point
+of our understanding of the Eucharist
+and the inspiration of our prayer
+and our commitment.
+</p>
+<p>
+We actively and joyfully participate
+in the banquet of the Risen Christ
+on the Lord's Day, on Feast Days,
+and whenever possible,
+even on weekdays.
+We nourish our faith
+at the Table of the Word of God,
+especially through the daily liturgical readings.
+</p>
+<div id="page-9" class="anchor"></div>
+<div class="page-number">Page 9</div><hr class="basic" />
+<p>
+Since we are called to witness
+to a Eucharistic lifestyle,
+we strive to become by our entire lives
+"adorers in spirit and truth
+whom the Father seeks."
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-12" class="filter-group">
+<div id="chapter-8" class="anchor"></div>
+<h4 class="chapter">8 The Prayer of Contemplation and Adoration</h4>
+<p>
+In a prayer of contemplation and adoration
+of Christ present in the Eucharist,
+solemnly exposed or in the tabernacle,
+we prolong the grace of the Mystery celebrated,
+intensifying our union with Christ
+so as to become with him and like him
+bread broken for a new world.
+</p>
+<p>
+Insofar as we can,
+we commit ourselves
+</p>
+<div id="page-10" class="anchor"></div>
+<div class="page-number">Page 10</div><hr class="basic" />
+<p>
+to personal Eucharistic adoration,
+whether monthly, weekly or daily.
+This prayer is part of our mission
+and holds an important place in our lives.
+</p>
+<p>
+The method of prayer
+taught by Saint Peter Julian Eymard
+is inspired by the celebration of the
+Eucharist.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-13" class="filter-group">
+<div id="chapter-9" class="anchor"></div>
+<h4 class="chapter">9 Liturgy of the Hours</h4>
+<p>
+The Liturgy of the Hours
+spreads the riches of the Eucharistic
+mystery
+over the various hours of the day
+and at the same time
+it prepares for the celebration of this mystery.
+It is the voice of the Church
+praising her Lord
+</p>
+<div id="page-11" class="anchor"></div>
+<div class="page-number">Page 11</div><hr class="basic" />
+<p>
+and with him offering the spiritual worship
+of the whole Mystical Bode to the Father.
+</p>
+<p>
+Insofar as we can, we share
+this prayer of the Church,
+both in a communal and personal way,
+giving particular importance
+to Morning and Evening Prayer
+(Lauds & Vespers).
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-14" class="filter-group">
+<div id="chapter-10" class="anchor"></div>
+<h4 class="chapter">10 The Liturgical Year</h4>
+<p>
+The Liturgical Year provides the
+context
+for our journey of faith,
+and offers us a Christian orientation
+for choices we make.
+Since we called to be transformed into
+Christ,
+we can thereby live the mysteries
+</p>
+<div id="page-12" class="anchor"></div>
+<div class="page-number">Page 12</div><hr class="basic" />
+<p>
+of his saving actions more intensely,
+and allow them to shape our life and
+commitment.
+We joyously celebrate the feasts
+special to our Association:
+the Solemnity of the Body and Blood of
+Christ,
+Our Lady of the Blessed Sacrament on May 13,
+the feast of Saint Peter Julian Eymard on
+August 2,
+and the day of his baptism, on February 5.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-15" class="filter-group">
+<div id="chapter-11" class="anchor"></div>
+<h4 class="chapter">11 With Mary</h4>
+<p>
+The Virgin Mary,
+the Mother of Jesus and of the
+Church,
+is the indispensable model
+of the Eucharistic life.
+She shared the disciples' life of prayer in the
+Cenacle
+</p>
+<div id="page-13" class="anchor"></div>
+<div class="page-number">Page 13</div><hr class="basic" />
+<p>
+and their apostolic journeying in the world.
+</p>
+<p>
+Like her,
+we let ourselves be guided by the Spirit
+so that, docile to his action,
+we may contribute effectively
+to the coming of the Kingdom.
+</p>
+<p>
+We honor and also invoke her
+by the title:
+<span class="italic">"Our Lady of the Blessed Sacrament."</span>
+</p>
+<div id="page-14" class="anchor"></div>
+<div class="page-number">Page 14</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-16" class="filter-group">
+<div id="section-III" class="anchor"></div>
+<h4 class="section">III - Mission and Service</h4>
+<div id="chapter-12" class="anchor"></div>
+<h4 class="chapter">12 Sharing In the Mission of the Church</h4>
+<p>
+We welcome Christ's command to
+the apostles,
+and like them we proclaim the
+Gospel
+and give witness  to id with our lives.
+We invite all people
+to that communion with God
+which we celebrate in the Eucharist.
+We collaborate with men and women of
+good will
+towards the building of a world of justice and
+solidarity.
+</p>
+<p>
+We are read to assume lay ministries
+in liturgy,
+in sharing of faith
+and in the pastoral structures of the church.
+</p>
+<div id="page-15" class="anchor"></div>
+<div class="page-number">Page 15</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-17" class="filter-group">
+<div id="chapter-13" class="anchor"></div>
+<h4 class="chapter">13 Christian Vision of Temporal Realities</h4>
+<p>
+Nourished by the Eucharist,
+source of liberation and communion,
+we wish to promote gospel values
+in social and political life,
+in the world of labor and finance,
+in the defense of family and of life,
+in the field of culture, education,
+sciences and arts,
+in the media,
+in the search for justice and peace,
+in the conservation of creation.
+</p>
+<div id="page-16" class="anchor"></div>
+<div class="page-number">Page 16</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-18" class="filter-group">
+<div id="chapter-14" class="anchor"></div>
+<h4 class="chapter">14 Proclamation and Eucharistic Catechesis</h4>
+<p>
+Like the disciples of Emmaus,
+who encountered the Risen Lord
+and recognized him
+in the breaking of Bread,
+we accompany all those who are seeking
+meaning in their lives
+and we proclaim Christ,
+the Word of eternal life.
+</p>
+<p>
+To accomplish this,
+we are available to help
+in providing catechesis in our parish,
+especially towards those preparing
+for their first participation in the Eucharist,
+both children and adults.
+</p>
+<div id="page-17" class="anchor"></div>
+<div class="page-number">Page 17</div><hr class="basic" />
+<p>
+We collaborate in the various initiatives
+aimed at promoting and forming
+an authentic Christian and Eucharistic
+spirituality.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-19" class="filter-group">
+<div id="chapter-15" class="anchor"></div>
+<h4 class="chapter">15 Liturgy</h4>
+<p>
+As members of the Aggregation
+we have a special love
+for the liturgy.
+We offer our availability
+for preparing and animating
+liturgical celebrations,
+especially the Sunday Eucharist
+in our parish.
+</p>
+<p>
+Those having the talent
+to undertake the following ministries
+volunteer their availability to become
+Readers, Acolytes, Coordinators,
+and Ministers of Communion to the sick, etc.
+</p>
+<div id="page-18" class="anchor"></div>
+<div class="page-number">Page 18</div><hr class="basic" />
+<p>
+We contribute to the Eucharistic formation
+of those who exercise or are preparing
+to undertake these ministries.
+</p>
+<p>
+We collaborate in overseeing
+everything that is required
+for the worthy celebration
+of the sacred Mysteries of the Lord:
+place of celebration, flowers, sacristy, etc.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-20" class="filter-group">
+<div id="chapter-16" class="anchor"></div>
+<h4 id="chapter16" class="chapter">16 Worship of the Eucharist</h4>
+<p>
+We engage in all the various
+expressions
+of Eucharistic worship:
+solemn exposition,
+Eucharistic days of recollection, Forty Hours,
+the Feast of the Body and Blood of Christ,
+Eucharistic Congresses.
+</p>
+<div id="page-19" class="anchor"></div>
+<div class="page-number">Page 19</div><hr class="basic" />
+<p>
+We foster adoration
+by inviting the faithful
+and in being available to participate
+in a schedule organized for adoration.
+We participate
+and collaborate in animating
+occasions of the communal adoration
+set up by the parish.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-21" class="filter-group">
+<div id="chapter-17" class="anchor"></div>
+<h4 class="chapter">17 Service of Charity and Social Commitment</h4>
+<p>
+We receive the inspiration and the
+strength
+for our service of charity
+and our commitment to transform society,
+from
+Christ,
+who offers himself totally to us
+in the Eucharist.
+</p>
+<div id="page-20" class="anchor"></div>
+<div class="page-number">Page 20</div><hr class="basic" />
+<p>
+We share in Christ's mission
+of bringing the Good News of Salvation
+to the least and the marginalized,
+to those oppressed
+by poverty, weakness,
+illness and hardship
+and to those who suffer persecution
+for the sake of justice.
+</p>
+<p>
+We take an active part
+in the actions of our local Church
+to foster solidarity, human dignity,
+and the holistic development of people.
+We take our inspiration for this mission
+from the social doctrine of the Church.
+</p>
+<div id="page-21" class="anchor"></div>
+<div class="page-number">Page 21</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-22" class="filter-group">
+<div id="section-IV" class="anchor"></div>
+<h4 class="section">IV - Admission and Ongoing Formation</h4>
+<div id="chapter-18" class="anchor"></div>
+<h4 class="chapter">18 Condition for Admission</h4>
+<p>
+Any lay person living a committed
+Christian life and who is at least 18
+years old can become a member of
+the Aggregation of the Blessed Sacrament.
+</p>
+<p>
+To belong to the Aggregation requires a free
+choice that is motivated and has matured
+under the inspiration of the Holy Spirit.
+Candidates will make known to the local
+Director their desire to join the Aggregation
+of the Blessed Sacrament. Candidates will
+then follow a suitable program of preparation
+and a period of probation (at least six months
+/ one year) in view of making their Promise
+of commitment.
+</p>
+<div id="page-22" class="anchor"></div>
+<div class="page-number">Page 22</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-23" class="filter-group">
+<div id="chapter-19" class="anchor"></div>
+<h4 class="chapter">19 Program of Preparation</h4>
+<p>
+Under the guidance of the Director, the
+program of preparation comprises:
+prayer, deepening of the life of faith,
+appreciation of the specific vocation of lay
+persons in the Church, catechesis about the
+Eucharist, knowledge of the life and charism
+of Saint Peter Julian Eymard, study of the
+<span class="italic">Rule of Life of the Association</span> sharing in the life
+and activities of the Association.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-24" class="filter-group">
+<div id="chapter-20" class="anchor"></div>
+<h4 class="chapter">20 Admission</h4>
+<p>
+At the end of the period of preparation
+and probation, candidates make the
+Promise to commit themselves to
+live their baptismal consecration along the
+evangelical way taught by Saint Peter Julian
+Eymard in accordance with the <span class="italic">Rule of Life for</span>
+</p>
+<div id="page-23" class="anchor"></div>
+<div class="page-number">Page 23</div><hr class="basic" />
+<p>
+<span class="italic">Associates</span> of the Aggregation of the Blessed
+Sacrament.
+</p>
+<p>
+Being admitted entails inscription in the
+Register of members of the Aggregation.
+As fitting, the occasion of admission will be
+marked by a public celebration of welcome,
+with the giving of an distinctive insignia
+and the pronouncing of the Promise of
+commitment.
+</p>
+<p>
+For just and valid reasons, the commitment
+undertaken can end either by a personal decision
+that has seriously matured and been made
+known to the Director, or by the decision of
+the Director, after having explained the reasons
+for it and after having dialogued with the person
+concerned.
+</p>
+<div id="page-24" class="anchor"></div>
+<div class="page-number">Page 24</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-25" class="filter-group">
+<div id="chapter-21" class="anchor"></div>
+<h4 class="chapter">21 Ongoing Formation</h4>
+<p>
+Members of the aggregation are
+aware that their sharing in the
+charism will be all the more fruitful
+and profound insofar as they become imbued
+with an authentic Christian spirit in accord
+with the spirituality and the mission of the
+Congregation itself.
+</p>
+<p>
+To Foster this purpose, they take part in the
+formation initiatives and gatherings arranged
+for them at the local and Congregational
+levels.
+</p>
+<p>
+Members will attend to their personal
+formation by study and reflection, deepening
+their understanding of the Holy Scriptures,
+the Church's teaching, and the spirituality of
+the founder.
+</p>
+<div id="page-25" class="anchor"></div>
+<div class="page-number">Page 25</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-26" class="filter-group">
+<div id="section-V" class="anchor"></div>
+<h4 class="section">V - Organization and Government</h4>
+<div id="chapter-22" class="anchor"></div>
+<h4 class="chapter">22 One Single Spiritual Family</h4>
+<p>
+The same spirituality and same ideal
+unites consecrated and lay members of
+the Blessed Sacrament Congregation as
+one spiritual family.
+</p>
+<p>
+Where there is a community of the Religious
+of the Blessed Sacrament, the lay members
+share with them social and prayer times,
+mission gatherings and formation initiatives.
+As associates, they are part of the extended
+Eymardian family which finds its identity in
+the spirit and mission of Saint Peter Julian
+Eymard.
+</p>
+<p>
+The essential features and structure of the
+Aggregation of the Blessed Sacrament as
+</p>
+<div id="page-26" class="anchor"></div>
+<div class="page-number">Page 26</div><hr class="basic" />
+<p>
+described in this document, may be adapted
+according to circumstances and places.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-27" class="filter-group">
+<div id="chapter-23" class="anchor"></div>
+<h4 class="chapter">23 Jurdical Configuration</h4>
+<p>
+The Aggregation of the Blessed
+Sacrament is configured, according
+to the Code of Canon Law, as an
+<span class="italic">"Association of Christ's faithful."</span>
+</p>
+<p>
+The organization consequently follows the
+specific norms of the code as set out in
+cannon 298-311 and 312-320, which relate to
+public associations of the faithful.
+</p>
+<p>
+It is united to the Congregations of the
+Religious and Servants of the Blessed
+Sacrament as it's <span class="italic">"own association"</span> since it was
+founded by Saint Peter Julian Eymard as a
+spiritual affiliation of his Congregations, but
+also because it has been officially declared
+</p>
+<div id="page-27" class="anchor"></div>
+<div class="page-number">Page 27</div><hr class="basic" />
+<p>
+as such by the Holy See for the Religious
+(20.12.1858; cf. SC Rei. Decr. 15.10.1957
+in "Analecta" V p. 62) and the Servants of
+the Blessed Sacrament (Laudatory Brief
+2.8.1872).
+</p>
+<p>
+It was erected as a <span class="italic">"Public, universal and
+international Association"</span> (can. 312 &sect; 1, 1&#176;),
+in fact, it was constituted, almost from its
+beginnings, as such by the Holy See (cf. Lit.
+Ap. 29.1.1875 and 8.5.1897) and thus enabled
+to follow its objectives in the name of the
+Church (can. 313). To it from 1 August 1923
+were affiliated all lay associations of the
+two religious Congregations, thus officially
+confirming also the communion that unites
+all lay associates of the great Eymardian family
+who share the same Eucharistic spirituality
+and mission.
+</p>
+<div id="page-28" class="anchor"></div>
+<div class="page-number">Page 28</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-28" class="filter-group">
+<div id="chapter-24" class="anchor"></div>
+<h4 class="chapter">24 General, Provincial and Local Organization and Government</h4>
+<p>
+The aggregation, by participating in
+the charism of the two Congregations
+founded by saint Peter Julian Eymard,
+is placed under their overall direction (can.
+303).
+</p>
+<p>
+It is organized on an international, national,
+and local level.
+</p>
+<p>
+The <span class="italic">overall direction</span> of the Aggregation is
+entrusted to the Superiors General of the
+two Congregations, its headquarters is at
+the respective Generalates: Via Giovanni
+Battista de Rossi 46, 00161 Roma (Italia);
+580 rue Dufferin, Sherbrooke, Qc (Canada
+J1h 4N1).
+</p>
+<div id="page-29" class="anchor"></div>
+<div class="page-number">Page 29</div><hr class="basic" />
+<p>
+The <span class="italic">National Director</span> is the Provincial
+Superior or a religious delegated for this ministry.
+</p>
+<p>
+The <span class="italic">local Director</span> of the Aggregation in the
+churches and shrines of the Congregation
+is by right the Superior of the community,
+who can delegate this task to another
+religious of the Congregation.
+</p>
+<p>
+For churches or shrines not of the
+Congregation, the local Director is named
+by the local Ordinary (can. 317 &sect; 2), in
+dialogue with the Provincial Superior.
+</p>
+<p>
+Where both religious Congregations are
+present, there is a close collaboration between
+those responsible and the members of the
+aggregation, and common initiatives are
+organized regarding formation and mission.
+</p>
+<div id="page-30" class="anchor"></div>
+<div class="page-number">Page 30</div><hr class="basic" />
+<p>
+Insofar as possible, there will be a means
+of liaison and communication between the
+Associates.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-29" class="filter-group">
+<div id="chapter-25" class="anchor"></div>
+<h4 class="chapter">25 Erection of Individual Branches</h4>
+<p>
+The aggregation can be set up in each
+community of the Congregations, or at
+churches connected to each community
+of the two Institutes, by their Provincial
+Superiors in accordance with cannons 312 &sect; 2
+and 611 &sect; 2.
+</p>
+<p>
+Other than in its communities in churches, in
+the territory of a diocese, the Aggregation can
+be erected with the written permission of
+the diocesan Bishop (can. 312 &sect; 2).
+</p>
+<div id="page-31" class="anchor"></div>
+<div class="page-number">Page 31</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-30" class="filter-group">
+<div id="chapter-26" class="anchor"></div>
+<h4 class="chapter">26 Unity and Diversity</h4>
+<p>
+The Aggregation can include various
+groups or sections, according to
+the different ways of participating
+in the Eucharistic spirituality, apostolate
+and respective commitments. Each section
+can have an appropriate name (Eucharistic
+Fraternity, Eucharistic Movement, Blessed
+Sacrament Laity...) and will determine its own
+distinctive features with its own guidelines.
+</p>
+</div> <!-- /filter-group -->
+
+<div id="filter-group-31" class="filter-group">
+<div id="chapter-27" class="anchor"></div>
+<h4 class="chapter">27 Tasks of the Local Director and the Council</h4>
+<p>
+The <span class="italic">local Director</span> has full authority for
+the discipline of the Association.
+In carrying out this responsibility he is assisted
+by a <span class="italic">Board</span> of at least two members. These
+</p>
+<div id="page-32" class="anchor"></div>
+<div class="page-number">Page 32</div><hr class="basic" />
+<p>
+members of the board are elected by the
+Associates for a determined period (one, two
+or three years) and are re-eligible.
+</p>
+<p>
+In dialogue with the Board, the Director will
+see to it that the Associates:
+</p>
+<ul class="director">
+<li>be formed in Eucharistic spirituality,</li>
+<li>be introduced into prayer according to Saint Peter Julian Eymard's charism,</li>
+<li>grow in a life of witness and service inspired by the Eucharist,</li>
+<li>deepen their knowledge of the Church's social doctrine</li>
+<li>express their lay apostolate in communion with the local church.</li>
+</ul>
+<p>
+In dialogue with the Board, the Director
+convokes and presides at the meetings, which
+are normally held each month.
+</p>
+<div id="page-33" class="anchor"></div>
+<div class="page-number">Page 33</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-32" class="filter-group">
+<div id="chapter-28" class="anchor"></div>
+<h4 class="chapter">28 Administration and Sharing in the Works of Charity</h4>
+<p>
+Associates will contribute to the annual
+budget approved for the needs of
+the life of the Association, and will
+share in the initiatives and works of charity
+promoted by the Aggregation.
+</p>
+<div id="page-34" class="anchor"></div>
+<div class="page-number">Page 34</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-33" class="filter-group">
+<div id="section-VI" class="anchor"></div>
+<h4 class="section">PROMISE</h4>
+<div id="chapter-29" class="anchor"></div>
+<h4 class="chapter">Associates of the Blessed Sacrament</h4>
+<p>
+God of all Holiness, you awakened<br>
+in Saint Peter Julian Eymard<br>
+a profound love for the Eucharist,<br>
+in which Christ, your son, offers himself for<br>
+<span class="white-space">     the life of the world.</span>
+</p>
+<p>
+Consumed by this love, Saint Peter Julian<br>
+<span class="white-space">     spent his life</span><br>
+proclaiming it to everyone.
+</p>
+<p>
+I wish to live my baptismal consecration<br>
+according to the charism of Saint Peter<br>
+<span class="white-space">     Julian Eymard;</span><br>
+and I want to place at the center of my life<br>
+<span class="white-space">     the Paschal mystery,</span><br>
+to contemplate it in prayer and to share with<br>
+<span class="white-space">     people</span><br>
+the life flowing from it.
+</p>
+<div id="page-35" class="anchor"></div>
+<div class="page-number">Page 35</div><hr class="basic" />
+<p>
+To this purpose, I [My Name],<br>
+express freely my desire to become a<br>
+<span class="white-space">     member of</span><br>
+the AGGREGATION OF THE BLESSED<br>
+<span class="white-space">     SACRAMENT,</span><br>
+and be inspired<br>
+by the <span class="italic">Rule of Life for Associates.</span>
+</p>
+<p>
+Placing my trust in Mary, Our Lady of the<br>
+<span class="white-space">     Cenacle,</span><br>
+I pledge to help bring justice and love to our<br>
+<span class="white-space">     world</span><br>
+so that Christ's Kingdom may come<br>
+and God's glory may be revealed.
+</p>
+<h4 class="title">Acclamation by the Assembly:</h4>
+<p class="acclamation">
+For the Kingdom, the power and
+the glory are yours, now and forever.
+Amen.
+</p>
+<div id="page-36" class="anchor"></div>
+<div class="page-number">Page 36</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-34" class="filter-group">
+<div id="section-VII" class="anchor"></div>
+<h4 class="section">PRAYERS</h4>
+<div id="chapter-30" class="anchor"></div>
+<h4 class="chapter center">Prayer in Honor of Saint Peter Julian Eymard</h4>
+
+<p>
+Gracious God of our ancestors, you led
+Peter Julian Eymard, like Jacob in times past,
+on a journey of faith. Under the guidance
+of your gentle Spirit, Peter Julian discovered
+the gift of love in the Eucharist which
+your son Jesus offered for the hungers of
+humanity. Grant that we may celebrate this
+mystery worthily, adore it profoundly, and
+proclaim it prophetically for your greater
+glory. Amen.
+</p>
+<p>
+Saint Peter Julian Eymard, Apostle of the
+Eucharist, pray for us!
+</p>
+<div id="page-37" class="anchor"></div>
+<div class="page-number">Page 37</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-35" class="filter-group">
+<div id="chapter-31" class="anchor"></div>
+<h4 class="chapter center">Prayer to Our Lady of the Blessed Sacrament</h4>
+<p>
+Blessed are you, Mary<br>
+exalted Daughter of Sion!<br>
+You are highly favored and<br>
+<span class="white-space">     full of grace,</span><br>
+for the Spirit of God<br>
+<span class="white-space">     descended upon you.</span>
+</p>
+<p>
+We magnify the Lord<br>
+and rejoice with you<br>
+for the gift<br>
+<span class="white-space">     of the Word made flesh,</span><br>
+  bread of life and cup of joy.
+</p>
+<p>
+Our Lady<br>
+<span class="white-space">     of the Blessed Sacrament,</span><br>
+our model of prayer in the Cenacle,<br>
+pray for us<br>
+that we may become<br>
+<span class="white-space">     what we receive,</span><br>
+the body of Christ your son.<br>
+<span class="white-space">     Amen.</span>
+</p>
+<div id="page-38" class="anchor"></div>
+<div class="page-number">Page 38</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-36" class="filter-group">
+<div id="chapter-32" class="anchor"></div>
+<h4 class="chapter center">Apostles of the Eucharistic Prayer</h4>
+
+<p>
+God of life and of light, your love for us
+surpasses all our hopes and desires.
+</p>
+<p>
+Renew our resolve to gather as your people
+and to celebrate your faithful love for us
+manifested in Jesus' gift of the Eucharist.
+</p>
+<p>
+Feed us at the table where we long for your
+presence more than for life itself. May we
+cherish the gifts of bread and wine and share
+these blessings with our brothers and sisters.
+</p>
+<p>
+Send us now, as witnesses of your gospel into
+a world of fragile peace and broken promises,
+so that, formed into the likeness of your son,
+Jesus, we may worship you in Spirit and Truth
+and proclaim your mighty deeds throughout
+the world. Amen.
+</p>
+<p>
+Saint Peter Julian Eymard, Apostle of the
+Eucharist, Pray for us.
+</p>
+<p class="italic center">
+Adapted from the liturgical prayers for Sundays.
+</p>
+<div id="page-39" class="anchor"></div>
+<div class="page-number">Page 39</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-37" class="filter-group">
+<div id="chapter-33" class="anchor"></div>
+<h4 class="chapter center">Vocation Prayer</h4>
+<p>
+Loving and Generous God<br>
+you have called us by name<br>
+and invited us to follow you;<br>
+Help us to grow in the love and<br>  
+in the service of our Church.
+</p>
+<p>
+Bless our Church by raising up<br>
+holy and generous leaders<br>
+from our family and friends<br>
+who will serve Your people<br>
+as Sisters, Priests, Brothers,<br>
+deacons, and Lay Ministers.<br>
+</p>
+<p>
+Inspire us to know You in your Word<br>
+and to love You in the Eucharist.<br>
+Open our hearts to hear Your call<br>
+to be witnesses of Your love<br>
+for Your greater glory.
+</p>
+<p>
+We offer this prayer through Your Son,<br>
+Jesus,<br>
+and through the intersession of Saint
+Peter Julian Eymard and of Our Lady of
+the Cenacle. Amen.
+</p>
+<div id="page-40" class="anchor"></div>
+<div class="page-number">Page 40</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-38" class="filter-group">
+<div id="chapter-34" class="anchor"></div>
+<h4 class="chapter center">A Way of Eucharistic Prayer</h4>
+<ul class="eucharistic-list"><li>
+Jesus, I acknowledge your real presence
+in the Eucharist and dwelling within me,
+loving me as I am. <span class="italic white-space">   Pause for silent prayer</span>
+</li><li>
+Jesus, I <span class="bold">praise</span> the wonders of your love,
+the beauty of creation, the light of your
+truth. <span class="italic white-space">   Pause for silent prayer</span>
+</li><li>
+Jesus, I <span class="bold">thank</span> you for the abundant
+blessings from your hands that provide all
+I need. <span class="italic white-space">   Pause for silent prayer</span>
+</li><li>
+Jesus, I am <span class="bold">sorry</span> for the times I have
+fallen short in loving you by not loving
+others. <span class="italic white-space">   Pause for silent prayer</span>
+</li><li>
+Lord, I <span class="bold">pray for</span> our church and world,
+my own needs and those of others; and
+I pray especially for ________.
+<span class="italic white-space">   Pause for silent prayer</span>
+</li></ul>
+<div id="page-41" class="anchor"></div>
+<div class="page-number">Page 41</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-39" class="filter-group">
+<div class="eucharistic-prayer">
+<p>
+"In your prayer aspire to nourish yourself upon
+God... This is the secret of true prayer; to discover
+God's action and plans in His love for us! Then
+the soul cries out 'How good you are, oh my God!
+What can I do for you? What could please you?'
+That is the which that rises from the hearth. To
+attain such a living prayer, we must forget ourselves,
+or avoid seeking ourselves in any way in prayer. We
+must simplify the work of our mind by a simple
+and calm view of God's truths."
+</p>
+<div class="right">Saint Peter Julian Eymard</div>
+<div class="right">Paris, August 27, 1867</div>
+</div>
+<div id="page-42" class="anchor"></div>
+<div class="page-number">Page 42</div><hr class="basic" />
+</div> <!-- /filter-group -->
+
+<div id="filter-group-40" class="filter-group">
+<div id="congregation" class="dont-break-out">
+<h5>Congregation of the Blessed Sacrament</h5>
+<div>5384 Wilson Mills Road</div>
+<div>Cleveland, Ohio 44143</div>
+<div>ssscomunications@blessedsacrament.com</div>
+<div>www.blessedsacrament.com</div>
+<div>440-442-6311</div>  
+</div>
+February 2013
+<div id="page-bottom" class="anchor"></div>
+<div id="page-43" class="anchor"></div>
+<div class="page-number">Page 43</div><hr class="basic" />
+</div> <!-- /filter-group -->
+</div> <!-- /hilitor-group -->
+
+<!-- MAIN CONTENT ------------------------------ MAIN CONTENT END -->
+</main>
+
+<!-- Start table of contents overlay. -->
+
+<div id="toc-overlay" class="overlay">
+  <!-- Button to close overlay. -->
+  <div id="toc-overlay-header" class="overlay-header">
+    <div class="overlay-title bold">Table of Contents</div>
+    <div class="closebtn bold" onclick="handleButton('close-toc')">X</div>
+  </div>
+
+  <div class="overlay-container">
+  <div id="toc-content" class="overlay-content">
+    <div class="toc-row" onclick="jumpTo('section-I')"><div class="col-0"></div><div class="col-10">I</div><div class="col-90">Identity and Scope</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-1')"><div class="col-10"></div><div class="col-10">1</div><div class="col-80">Name</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-2')"><div class="col-10"></div><div class="col-10">2</div><div class="col-80">Our Ideal</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-3')"><div class="col-10"></div><div class="col-10">3</div><div class="col-80">The Founder</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-4')"><div class="col-10"></div><div class="col-10">4</div><div class="col-80">Spirit</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-5')"><div class="col-10"></div><div class="col-10">5</div><div class="col-80">The Life of the Associates</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-II')"><div class="col-0"></div><div class="col-10">II</div><div class="col-90">A Life Shaped by the Eucharist</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-6')"><div class="col-10"></div><div class="col-10">6</div><div class="col-80">The Eucharist at the Center of Our Life</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-7')"><div class="col-10"></div><div class="col-10">7</div><div class="col-80">The Eucharistic Celebration</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-8')"><div class="col-10"></div><div class="col-10">8</div><div class="col-80">The Prayer of Contemplation and Adoration</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-9')"><div class="col-10"></div><div class="col-10">9</div><div class="col-80">Liturgy of the Hours</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-10')"><div class="col-10"></div><div class="col-10">10</div><div class="col-80">The Liturgical Year</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-11')"><div class="col-10"></div><div class="col-10">11</div><div class="col-80">With Mary</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-III')"><div class="col-0"></div><div class="col-10">III</div><div class="col-90">Mission and Service</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-12')"><div class="col-10"></div><div class="col-10">12</div><div class="col-80">Sharing In the Mission of the Church</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-13')"><div class="col-10"></div><div class="col-10">13</div><div class="col-80">Christian Vision of Temporal Realities</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-14')"><div class="col-10"></div><div class="col-10">14</div><div class="col-80">Proclamation and Eucharistic Catechesis</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-15')"><div class="col-10"></div><div class="col-10">15</div><div class="col-80">Liturgy</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-16')"><div class="col-10"></div><div class="col-10">16</div><div class="col-80">Worship of the Eucharist</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-17')"><div class="col-10"></div><div class="col-10">17</div><div class="col-80">Service of Charity and Social Commitment</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-IV')"><div class="col-0"></div><div class="col-10">IV</div><div class="col-90">Admission and Ongoing Formation</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-18')"><div class="col-10"></div><div class="col-10">18</div><div class="col-80">Condition for Admission</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-19')"><div class="col-10"></div><div class="col-10">19</div><div class="col-80">Program of Preparation</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-20')"><div class="col-10"></div><div class="col-10">20</div><div class="col-80">Admission</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-21')"><div class="col-10"></div><div class="col-10">21</div><div class="col-80">Ongoing Formation</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-V')"><div class="col-0"></div><div class="col-10">V</div><div class="col-90">Organization and Government</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-22')"><div class="col-10"></div><div class="col-10">22</div><div class="col-80">One Single Spiritual Family</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-23')"><div class="col-10"></div><div class="col-10">23</div><div class="col-80">Jurdical Configuration</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-24')"><div class="col-10"></div><div class="col-10">24</div><div class="col-80">General, Provincial and Local Organization and Government</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-25')"><div class="col-10"></div><div class="col-10">25</div><div class="col-80">Erection of Individual Branches</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-26')"><div class="col-10"></div><div class="col-10">26</div><div class="col-80">Unity and Diversity</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-27')"><div class="col-10"></div><div class="col-10">27</div><div class="col-80">Tasks of the Local Director and the Council</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-28')"><div class="col-10"></div><div class="col-10">28</div><div class="col-80">Administration and Sharing in the Works of Charity</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-VI')"><div class="col-0"></div><div class="col-10"></div><div class="col-90">PROMISE</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-29')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">Associates of the Blessed Sacrament</div></div>
+
+    <div class="toc-row" onclick="jumpTo('section-VII')"><div class="col-0"></div><div class="col-10"></div><div class="col-90">PRAYERS</a></div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-30')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">Prayer in Honor of Saint Peter Julian Eymard</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-31')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">Prayer to Our Lady of the Blessed Sacrament</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-32')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">Apostles of the Eucharistic Prayer</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-33')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">Vocation Prayer</div></div>
+    <div class="toc-row" onclick="jumpTo('chapter-34')"><div class="col-10"></div><div class="col-10"></div><div class="col-80">A Way of Eucharistic Prayer</div></div>
+  </div>
+  </div>
+</div>
+<!-- End table of contents overlay. -->
+
+<!-- Start goto page overlay -->
+<div id="goto-overlay" class="overlay">
+  <!-- Button to close overlay. -->
+  <div id="goto-overlay-header" class="overlay-header">
+    <div class="overlay-title bold">Goto Page...</div>
+    <div class="closebtn bold" onclick="handleButton('close-goto')">X</div>
+  </div>
+
+  <div class="overlay-container">
+  <div id="goto-content" class="overlay-content">
+    <table id="goto-table">
+    <tbody>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-0')">1</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-1')">2</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-2')">3</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-3')">4</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-4')">5</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-5')">6</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-6')">7</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-7')">8</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-8')">9</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-9')">10</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-10')">11</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-11')">12</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-12')">13</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-13')">14</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-14')">15</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-15')">16</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-16')">17</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-17')">18</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-18')">19</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-19')">20</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-20')">21</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-21')">22</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-22')">23</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-23')">24</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-24')">25</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-25')">26</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-26')">27</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-27')">28</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-28')">29</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-29')">30</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-30')">31</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-31')">32</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-32')">33</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-33')">34</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-34')">35</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-35')">36</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-36')">37</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-37')">38</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-38')">39</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-39')">40</div></td>
+      </tr>
+      <tr>
+      <td><div class="goto-button" onclick="jumpTo('page-40')">41</div></td>
+      <td><div class="goto-button" onclick="jumpTo('page-41')">42</div></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+<!-- End goto page overlay. -->
+
+<!-- Start change fontsize modal. -->
+<div id="fontsize-modal" class="modal">
+  <div class="modal-content">
+    <div id="fontsize-header" class="modal-header">
+      <a href="#!" class="closebtn bold" onclick="handleButton('close-fontsize')">X</a>
+    </div>
+    <div class="modal-body">
+      <div class="btn-group">
+        <span class="label">Font Size:</span>
+        <button title="Decrease" aria-label="Decrease" onclick="handleButton('fontsize-decrease')"><img src="images/icon-minus.png" alt="Decrease" /></button>
+        <button title="Reset" aria-label="Reset" onclick="handleButton('fontsize-reset')"><img src="images/icon-undo.png" alt="Reset" /></button>
+        <button title="Increase" aria-label="Increase" onclick="handleButton('fontsize-increase')"><img src="images/icon-plus.png" alt="Increase" /></button>
+      </div>
+      <div id="sample-text">
+        <p>The quick brown fox jumps over the lazy dog.</p>
+      </div>
+    </div>
+    <div id="fontsize-footer" class="modal-footer">
+      <button class="button button4" onclick="handleButton('cancel-fontsize')">Cancel</button>
+      <button class="button button4" onclick="handleButton('apply-fontsize')">Apply</button>
+    </div>
+  </div>
+</div>
+<!-- End change fontsize modal. -->
+
+<script src="js/hilitor.js"></script>
+<script src="js/main.js"></script>
+<script src="js/install.js"></script>
+
+</body>
+</html>
